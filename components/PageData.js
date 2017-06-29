@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Dimensions } from 'react-native';
+
+const { width } = Dimensions.get('window');
 
 const Page = ({ width, height, children }) => (
   <View style={{ width, height }}>
@@ -24,7 +26,7 @@ const PageData = ({ isLight, image, title, subtitle, ...rest }) => (
       <Text style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
         {title}
       </Text>
-      <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}) }}>
+      <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}), padding: 25 }}>
         {subtitle}
       </Text>
     </PageContent>
@@ -39,13 +41,16 @@ const styles = {
     justifyContent: 'center',
   },
   image: {
-    flex: 0,
-    paddingBottom: 60,
+    // flex: 0,
+    marginBottom: 20,
+    width: width,
+    height: width/1.4,
     alignItems: 'center',
+    justifyContent: 'center'
   },
   title: {
     textAlign: 'center',
-    fontSize: 26,
+    fontSize: 25,
     color: '#fff',
     paddingBottom: 15,
   },
@@ -54,7 +59,7 @@ const styles = {
   },
   subtitle: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 15,
     color: 'rgba(255, 255, 255, 0.7)',
   },
   subtitleLight: {

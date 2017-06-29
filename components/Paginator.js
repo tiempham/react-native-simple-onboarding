@@ -5,22 +5,22 @@ import PageDots from './PageDots';
 import { SymbolButton, TextButton } from './Buttons';
 
 const getDefaultStyle = (isLight) => ({
-  color: isLight ? 'rgba(0, 0, 0, 0.8)' : '#fff',
+  color: isLight ? '#ff6619' : '#b2b2b2',
 });
 
 const SkipButton = ({ isLight, ...props }) => (
   <TextButton {...props} textStyle={getDefaultStyle(isLight)}>
-    Skip
+    BỎ QUA
   </TextButton>
 );
 
 const NextButton = ({ isLight, ...props }) => (
-  <SymbolButton {...props} textStyle={getDefaultStyle(isLight)}>
-    →
-  </SymbolButton>
+  <TextButton textStyle={getDefaultStyle("#ff6619")} {...props}>
+    TIẾP TỤC
+  </TextButton>
 );
 const DoneButton = ({ isLight, size, ...props }) => (
-  <SymbolButton {...props} size={size} textStyle={getDefaultStyle(isLight)} style={{ borderRadius: size / 2, backgroundColor: 'rgba(255, 255, 255, 0.10)' }}>
+  <SymbolButton {...props} size={size} textStyle={{color:'#ff6619'}} style={{ borderRadius: size / 2, backgroundColor: 'rgba(255, 255, 255, 0.10)' }}>
     ✓
   </SymbolButton>
 );
@@ -53,15 +53,15 @@ const styles = {
     alignItems: 'center',
   },
   containerOverlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#fff',
   },
   buttonLeft: {
-    width: 70,
+    width: 80,
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
   buttonRight: {
-    width: 70,
+    width: 80,
     justifyContent: 'flex-end',
     alignItems: 'center',
   }

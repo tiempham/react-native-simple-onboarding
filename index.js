@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { View, ScrollView, Dimensions, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, ScrollView, Dimensions, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import tinycolor from 'tinycolor2';
 
 import PageData from './components/PageData';
@@ -37,13 +37,14 @@ export default class Onboarding extends Component {
 
   render() {
     const { width, height } = Dimensions.get('window');
-    const { pages, bottomOverlay, showSkip, showNext, showDone } = this.props;
+    const { pages, bottomOverlay, showSkip, showNext, showDone, imageBG } = this.props;
     const currentPage = pages[this.state.currentPage] || pages[0];
     const { backgroundColor } = currentPage;
     const isLight = tinycolor(backgroundColor).getBrightness() > 180;
 
     return (
-      <View style={{ flex: 1, backgroundColor: backgroundColor, justifyContent: 'center' }}>
+      <View style={{ flex: 1,  justifyContent: 'center' }}>
+        <Image style={{flex: 1}} source={imageBG} resizeMode="cover" >
         <ScrollView
           ref="scroll"
           pagingEnabled={true}
@@ -51,6 +52,7 @@ export default class Onboarding extends Component {
           showsHorizontalScrollIndicator={false}
           onScroll={this.updatePosition}
           scrollEventThrottle={100}
+         // contentContainerStyle={{backgroundColor:'red'}}
         >
           {pages.map(({ image, title, subtitle }, idx) => (
             <PageData
@@ -64,8 +66,10 @@ export default class Onboarding extends Component {
             />
           ))}
         </ScrollView>
+        </Image>
+
         <Paginator
-          isLight={isLight}
+          // isLight={isLight}
           overlay={bottomOverlay}
           showSkip={showSkip}
           showNext={showNext}
@@ -75,6 +79,7 @@ export default class Onboarding extends Component {
           onEnd={this.props.onEnd}
           onNext={this.goNext}
         />
+
       </View>
     );
   }
@@ -91,6 +96,7 @@ Onboarding.propTypes = {
   showSkip: PropTypes.bool,
   showNext: PropTypes.bool,
   showDone: PropTypes.bool,
+  imageBG: PropTypes.any,
 };
 
 Onboarding.defaultProps = {
