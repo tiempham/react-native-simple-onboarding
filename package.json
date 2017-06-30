@@ -11,9 +11,30 @@
         "type": "tag"
       },
       "/Users/duynguyen/Desktop/Git/BaNoiTro"
+    ],
+    [
+      {
+        "raw": "https://github.com/votheduy154/react-native-simple-onboarding.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/votheduy154/react-native-simple-onboarding.git",
+        "spec": "git+https://github.com/votheduy154/react-native-simple-onboarding.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:votheduy154/react-native-simple-onboarding.git",
+          "sshUrl": "git+ssh://git@github.com/votheduy154/react-native-simple-onboarding.git",
+          "httpsUrl": "git+https://github.com/votheduy154/react-native-simple-onboarding.git",
+          "gitUrl": "git://github.com/votheduy154/react-native-simple-onboarding.git",
+          "shortcut": "github:votheduy154/react-native-simple-onboarding",
+          "directUrl": "https://raw.githubusercontent.com/votheduy154/react-native-simple-onboarding/master/package.json"
+        }
+      },
+      "/Users/duynguyen/Desktop/Git/BaNoiTro"
     ]
   ],
-  "_from": "react-native-simple-onboarding@latest",
+  "_from": "git+https://github.com/votheduy154/react-native-simple-onboarding.git",
   "_id": "react-native-simple-onboarding@0.1.1",
   "_inCache": true,
   "_location": "/react-native-simple-onboarding",
@@ -29,22 +50,31 @@
   "_npmVersion": "3.8.3",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "react-native-simple-onboarding",
+    "raw": "https://github.com/votheduy154/react-native-simple-onboarding.git",
     "scope": null,
-    "escapedName": "react-native-simple-onboarding",
-    "name": "react-native-simple-onboarding",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/votheduy154/react-native-simple-onboarding.git",
+    "spec": "git+https://github.com/votheduy154/react-native-simple-onboarding.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:votheduy154/react-native-simple-onboarding.git",
+      "sshUrl": "git+ssh://git@github.com/votheduy154/react-native-simple-onboarding.git",
+      "httpsUrl": "git+https://github.com/votheduy154/react-native-simple-onboarding.git",
+      "gitUrl": "git://github.com/votheduy154/react-native-simple-onboarding.git",
+      "shortcut": "github:votheduy154/react-native-simple-onboarding",
+      "directUrl": "https://raw.githubusercontent.com/votheduy154/react-native-simple-onboarding/master/package.json"
+    }
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/react-native-simple-onboarding/-/react-native-simple-onboarding-0.1.1.tgz",
-  "_shasum": "0a0db528a339f6be01dac60fe4ee26629ee832de",
+  "_resolved": "git+https://github.com/votheduy154/react-native-simple-onboarding.git#7fe37def67478dd8894563e150886066faff7060",
+  "_shasum": "65c64394359ef67e083dad58131ec43d2f4a5f33",
   "_shrinkwrap": null,
-  "_spec": "react-native-simple-onboarding",
+  "_spec": "https://github.com/votheduy154/react-native-simple-onboarding.git",
   "_where": "/Users/duynguyen/Desktop/Git/BaNoiTro",
   "author": {
     "name": "Gosha Arinich"

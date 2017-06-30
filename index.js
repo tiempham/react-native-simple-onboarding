@@ -44,7 +44,7 @@ export default class Onboarding extends Component {
 
     return (
       <View style={{ flex: 1,  justifyContent: 'center' }}>
-        <Image style={{flex: 1}} source={imageBG} resizeMode="cover" >
+        <Image style={{flex: 1, width: width}} source={imageBG} resizeMode="cover" >
         <ScrollView
           ref="scroll"
           pagingEnabled={true}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Dimensions } from 'react-native';
+import { TextFont } from '../../../src/ui'
 
 const { width } = Dimensions.get('window');
 
@@ -23,12 +24,12 @@ const PageData = ({ isLight, image, title, subtitle, ...rest }) => (
       <View style={styles.image}>
         {image}
       </View>
-      <Text style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
+      <TextFont size={25} style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
         {title}
-      </Text>
-      <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}), padding: 25 }}>
+      </TextFont>
+      <TextFont size={15} style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}), padding: 25 }}>
         {subtitle}
-      </Text>
+      </TextFont>
     </PageContent>
   </Page>
 );
@@ -50,7 +51,6 @@ const styles = {
   },
   title: {
     textAlign: 'center',
-    fontSize: 25,
     color: '#fff',
     paddingBottom: 15,
   },
@@ -59,7 +59,6 @@ const styles = {
   },
   subtitle: {
     textAlign: 'center',
-    fontSize: 15,
     color: 'rgba(255, 255, 255, 0.7)',
   },
   subtitleLight: {
