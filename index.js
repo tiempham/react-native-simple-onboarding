@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { View, ScrollView, Dimensions, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import React, { Component } from 'react';
+import { View, ScrollView, Dimensions, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import tinycolor from 'tinycolor2';
 
 import PageData from './components/PageData';
@@ -44,7 +44,7 @@ export default class Onboarding extends Component {
 
     return (
       <View style={{ flex: 1,  justifyContent: 'center' }}>
-        <Image style={{flex: 1, width: width}} source={imageBG} resizeMode="cover" >
+        <ImageBackground style={{flex: 1, width: width}} source={imageBG} resizeMode="cover" >
         <ScrollView
           ref="scroll"
           pagingEnabled={true}
@@ -66,7 +66,7 @@ export default class Onboarding extends Component {
             />
           ))}
         </ScrollView>
-        </Image>
+        </ImageBackground>
 
         <Paginator
           // isLight={isLight}
@@ -85,19 +85,7 @@ export default class Onboarding extends Component {
   }
 }
 
-Onboarding.propTypes = {
-  pages: PropTypes.arrayOf(PropTypes.shape({
-    backgroundColor: PropTypes.string.isRequired,
-    image: PropTypes.element.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-  })).isRequired,
-  bottomOverlay: PropTypes.bool,
-  showSkip: PropTypes.bool,
-  showNext: PropTypes.bool,
-  showDone: PropTypes.bool,
-  imageBG: PropTypes.any,
-};
+
 
 Onboarding.defaultProps = {
   bottomOverlay: true,
